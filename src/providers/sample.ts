@@ -4,7 +4,7 @@ export class SampleProvider implements vscode.TreeDataProvider<string> {
   getTreeItem(element: string): vscode.TreeItem | Thenable<vscode.TreeItem> {
     const item = new vscode.TreeItem(element);
     item.command = {
-      command: "my-repositories.sample",
+      command: "vscode-extension-template.sample",
       title: "コマンドサンプル",
       // arguments: [],
     };

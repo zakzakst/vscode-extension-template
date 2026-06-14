@@ -1,9 +1,9 @@
 import * as vscode from "vscode";
 
 export const sampleDisposable = vscode.commands.registerCommand(
-  "my-repositories.sample",
+  "vscode-extension-template.sample",
   () => {
-    const config = vscode.workspace.getConfiguration("my-repositories");
+    const config = vscode.workspace.getConfiguration("vscode-extension-template");
     const sample = config.get<string>("sample", "");
     if (!sample) {
       vscode.window.showInformationMessage(

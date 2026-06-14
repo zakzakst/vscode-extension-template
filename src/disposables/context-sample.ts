@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 
 export const contextSampleDisposable = vscode.commands.registerCommand(
-  "my-repositories.context-sample",
+  "vscode-extension-template.context-sample",
   () => {
     vscode.window.showInformationMessage("右クリック コマンドサンプル");
   },

@@ -1,5 +1,5 @@
 {
-  "name": "my-repositories",
+  "name": "vscode-extension-template",
   "publisher": "zakzakst",
   "displayName": "",
   "description": "",
@@ -15,18 +15,18 @@
   "contributes": {
     "commands": [
       {
-        "command": "my-repositories.sample",
+        "command": "vscode-extension-template.sample",
         "title": "コマンドサンプル"
       },
       {
-        "command": "my-repositories.context-sample",
+        "command": "vscode-extension-template.context-sample",
         "title": "右クリック コマンドサンプル"
       }
     ],
     "configuration": {
       "title": "サンプル",
       "properties": {
-        "my-repositories.sample": {
+        "vscode-extension-template.sample": {
           "type": "string",
           "default": "",
           "description": "サンプルテキスト"
@@ -54,11 +54,11 @@
     "menus": {
       "view/item/context": [
         {
-          "command": "my-repositories.sample",
+          "command": "vscode-extension-template.sample",
           "when": "viewItem == context-sample"
         },
         {
-          "command": "my-repositories.context-sample",
+          "command": "vscode-extension-template.context-sample",
           "when": "viewItem == context-sample"
         }
       ]
@@ -71,7 +71,7 @@
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
     "package": "npm run check-types && npm run lint && node esbuild.js --production",
-    "package:vsce": "vsce package --out downloads",
+    "package:vsce": "vsce package --out downloads --allow-missing-repository",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
@@ -87,12 +87,12 @@
     "@types/vscode": "^1.120.0",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.9.2",
     "esbuild": "^0.27.3",
     "eslint": "^9.39.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.8.4",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1",
-    "vsce": "^2.15.0"
+    "typescript-eslint": "^8.56.1"
   }
 }
